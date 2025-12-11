@@ -1,0 +1,75 @@
+\documentclass[UTF8]{ctexart}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+\geometry{a4paper, margin=1in}
+
+% Define custom colors
+\definecolor{primary}{RGB}{0, 120, 215}
+\definecolor{secondary}{RGB}{0, 150, 136}
+
+% Define knowledge point / theorem box
+\newtcolorbox{kbox}[1][]{
+  colback=primary!5!white,
+  colframe=primary,
+  fonttitle=\bfseries,
+  title={#1},
+  rounded corners,
+  enhanced,
+  attach boxed title to top left={yshift=-2mm, xshift=2mm},
+  boxed title style={colback=primary}
+}
+
+% Define question / problem box
+\newtcolorbox{qbox}[1][]{
+  colback=red!5!white,
+  colframe=red!75!black,
+  fonttitle=\bfseries,
+  title={#1},
+  rounded corners, 
+  enhanced
+}
+
+% Code listing style
+\lstset{
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=tb,
+    columns=fullflexible,
+    backgroundcolor=\color{gray!5},
+    captionpos=t, % Caption on top
+    breaklines=true,
+    showstringspaces=false,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    aboveskip=1em,
+    belowskip=1em,
+    xleftmargin=1em,
+    framexleftmargin=1em
+}
+
+% Define proof / answer environment
+\newenvironment{solution}
+{\par\noindent\textbf{\color{secondary}证明/解答：}\par\nopagebreak}
+{\par\vspace{1em}}
+
+\title{ \VAR{ title } }
+\author{ \VAR{ author } }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\VAR{ body }
+
+\end{document}

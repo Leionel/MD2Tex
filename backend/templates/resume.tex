@@ -1,0 +1,43 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Colors
+\definecolor{primary}{RGB}{0, 79, 144}
+
+% Formatting
+\titleformat{\section}{\Large\bfseries\color{primary}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\large\bfseries}{}{0em}{}
+\titlespacing{\section}{0pt}{12pt}{6pt}
+\titlespacing{\subsection}{0pt}{6pt}{3pt}
+
+% Lists
+\setlist[itemize]{leftmargin=*}
+
+% Hyperlinks
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=primary
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+% Header
+\begin{center}
+    {\Huge \bfseries \VAR{title}} \\ [5pt]
+    \VAR{author} | \today \\ [5pt]
+    Created with MD2TeX
+\end{center}
+
+% Content
+\VAR{body}
+
+\end{document}
