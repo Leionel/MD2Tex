@@ -4,7 +4,7 @@
 
 ---
 
-MD2TeX is a modern, web-based tool designed to convert enhanced Markdown (including Chinese, Math, Tables, and Cross-references) into high-quality LaTeX documents. It features a React frontend with a Monaco Editor and a FastAPI backend with a custom-engineered rendering engine.
+MD2TeX is a modern, web-based tool designed to convert enhanced Markdown (including Chinese, Math, Tables, and Cross-references) into high-quality LaTeX documents. It features a React frontend with a Monaco Editor and a FastAPI backend with a custom-engineered rendering engine.（developed by Antigravity though）
 
 ## ✨ Features
 
